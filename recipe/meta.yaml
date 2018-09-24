@@ -9,13 +9,7 @@ package:
 
 source:
   fn: {{ pname }}-{{ version }}.tar.gz
-  url: https://www.open-mpi.org/software/hwloc/v{{ '.'.join(version.split('.')[:2]) }}/downloads/{{ pname }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
-  patches:
-    - unistd.diff
-    - s_irwxu.patch
-    - cr.patch
-    - strcasecmp.patch
+  url: https://github.com/bgoglin/hwloc/archive/f1531fa370157dc2f3d95faebe9c4ea68572b5df.tar.gz
 
 build:
   number: 0
