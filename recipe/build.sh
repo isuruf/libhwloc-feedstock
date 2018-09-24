@@ -5,7 +5,7 @@ set -e
 DISABLES="--disable-cairo --disable-opencl --disable-cuda --disable-nvml"
 DISABLES="$DISABLES --disable-gl --disable-libudev"
 
-chmod +x configure
+#chmod +x configure
 
 case `uname` in
     Darwin)
