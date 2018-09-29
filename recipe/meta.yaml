@@ -9,7 +9,7 @@ package:
 
 source:
   fn: {{ pname }}-{{ version }}.tar.gz
-  url: https://github.com/bgoglin/hwloc/archive/3da660640ec470e056e49904fe1786019bb714b1.tar.gz
+  url: https://github.com/open-mpi/hwloc/archive/c27b96c4961a55b22f823896e4ef5f9eb00c7d67.tar.gz
 
 build:
   number: 0
