@@ -1,22 +1,20 @@
 {% set name = "libhwloc" %}
-{% set pname = "hwloc" %}
-{% set version = "2.0.3" %}
-{% set sha256 = "64def246aaa5b3a6e411ce10932a22e2146c3031b735c8f94739534f06ad071c" %}
+{% set version = "1.11.2" %}
+{% set sha256 = "d11f091ed54c56c325ffca1083113a405fcd8a25d5888af64f5cd6cf587b7b0a" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ pname }}-{{ version }}.tar.gz
-  url: https://www.open-mpi.org/software/hwloc/v{{ '.'.join(version.split('.')[:2]) }}/downloads/{{ pname }}-{{ version }}.tar.gz
+  url: https://www.open-mpi.org/software/hwloc/v{{ '.'.join(version.split('.')[:2]) }}/downloads/hwloc-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  skip: True  # [win and vc<14]
+  number: 0
+  skip: True  # [win]
   run_exports:
-  - {{ pin_subpackage(name, max_pin='x.x.x') }}  
+  - {{ pin_subpackage(name, max_pin='x.x') }}
 
 requirements:
   build:
